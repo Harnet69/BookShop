@@ -1,11 +1,11 @@
 package com.harnet.model;
 
 public class Book extends Item {
-    Author author;
-    int publYear;
+    private Author author;
+    private int publYear;
 
-    public Book(int id, String name, Author author, int publYear) {
-        super(id, name);
+    public Book(String name, Author author, int publYear) {
+        super(name);
         this.author = author;
         this.publYear = publYear;
     }

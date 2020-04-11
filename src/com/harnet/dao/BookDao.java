@@ -2,13 +2,16 @@ package com.harnet.dao;
 
 import com.harnet.model.Book;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class BookDao implements Dao<Book> {
+    Map<Integer, Book> books = new HashMap<>();
 
     @Override
     public void add(Book item) {
-
+        books.put(item.getId(), item);
     }
 
     @Override
@@ -27,7 +30,11 @@ public class BookDao implements Dao<Book> {
     }
 
     @Override
-    public List<Book> getAll() {
-        return null;
+    public Map<Integer, Book> getAll() {
+        return books;
+    }
+
+    public Map<Integer, Book> getBooks() {
+        return books;
     }
 }

@@ -5,8 +5,8 @@ public class Author extends Item {
     int birthYear;
 
 
-    public Author(int id, String name, String email, int birthYear) {
-        super(id, name);
+    public Author(String name, String email, int birthYear) {
+        super(name);
         this.email = email;
         this.birthYear = birthYear;
     }

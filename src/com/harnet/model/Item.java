@@ -5,7 +5,7 @@ public class Item {
     private int id;
     private String name;
 
-    public Item(int id, String name) {
+    public Item(String name) {
         this.id = counterId + 1;
         this.name = name;
         counterId++;

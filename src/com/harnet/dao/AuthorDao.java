@@ -3,6 +3,7 @@ package com.harnet.dao;
 import com.harnet.model.Author;
 
 import java.util.List;
+import java.util.Map;
 
 public class AuthorDao implements Dao<Author> {
 
@@ -27,7 +28,7 @@ public class AuthorDao implements Dao<Author> {
     }
 
     @Override
-    public List<Author> getAll() {
+    public Map<Integer, Author> getAll() {
         return null;
     }
 }
