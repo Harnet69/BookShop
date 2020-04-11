@@ -4,17 +4,23 @@ import com.harnet.model.Author;
 import com.harnet.model.Book;
 import com.harnet.model.Shop;
 
-import java.util.Map;
-
 public class Main {
 
     public static void main(String[] args) {
-        // SShop details
+        // Shop details
         System.out.println(Shop.getInstance().getName());
         System.out.println(Shop.getInstance().getDescription());
 
+        //Add new authors of books
+        Author Tolkien = new Author("J. R. R. Tolkien", "tolkien@gmail.com", 1892);
+        Author Lucas = new Author("George Lucas", "lucas@gmail.com", 1944);
+        Shop.getInstance().getAuthorsInMem().add(Tolkien);
+        Shop.getInstance().getAuthorsInMem().add(Lucas);
+
         // Add some book to shop books store
-        Shop.getInstance().getBookInMem().add(new Book("The Hobbit", new Author("J. R. R. Tolkien", "tolkien@gmail.com", 1892), 1937));
+        Shop.getInstance().getBooksInMem().add(new Book("The Hobbit", Tolkien, 1937));
+        Shop.getInstance().getBooksInMem().add(new Book("Star wars", Lucas, 1977));
+        Shop.getInstance().getBooksInMem().add(new Book("Lord of the rings", Shop.getInstance().getAuthorsInMem().get(1), 1937));
 
         // Display all books
         Shop.getInstance().displayAllBooks();

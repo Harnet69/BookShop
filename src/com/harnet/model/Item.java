@@ -1,7 +1,7 @@
 package com.harnet.model;
 
 public class Item {
-    private int counterId = 0;
+    private static int counterId = 0; // thinking about common id
     private int id;
     private String name;
 

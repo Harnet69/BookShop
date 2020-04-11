@@ -1,5 +1,6 @@
 package com.harnet.model;
 
+import com.harnet.dao.AuthorDao;
 import com.harnet.dao.BookDao;
 
 import java.util.Map;
@@ -8,10 +9,12 @@ public class Shop {
     private static Shop instance = null;
     private final String name = "Free books shop";
     private final String description = "Internet store where you can find all books for free";
-    BookDao bookInMem;
+    private AuthorDao authorsInMem;
+    private BookDao booksInMem;
 
     private Shop() {
-        bookInMem = new BookDao();
+        booksInMem = new BookDao();
+        authorsInMem = new AuthorDao();
     }
 
     public static Shop getInstance(){
@@ -29,12 +32,16 @@ public class Shop {
         return description;
     }
 
-    public BookDao getBookInMem() {
-        return bookInMem;
+    public BookDao getBooksInMem() {
+        return booksInMem;
+    }
+
+    public AuthorDao getAuthorsInMem() {
+        return authorsInMem;
     }
 
     public void displayAllBooks(){
-        Map<Integer, Book> books = bookInMem.getAll();
+        Map<Integer, Book> books = booksInMem.getAll();
         books.forEach((integer, book) -> System.out.println(integer  + " : " + book.getName() + ", " + book.getAuthor().getName()+ ", " + book.getPublYear()));
     }
 }
