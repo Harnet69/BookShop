@@ -16,25 +16,21 @@ public class BookDao implements Dao<Book> {
 
     @Override
     public void update(int id, Book item) {
-
+        books.put(id, item);
     }
 
     @Override
     public void delete(int id) {
-
+        books.remove(id);
     }
 
     @Override
     public Book get(int id) {
-        return null;
+        return books.get(id);
     }
 
     @Override
     public Map<Integer, Book> getAll() {
-        return books;
-    }
-
-    public Map<Integer, Book> getBooks() {
         return books;
     }
 }

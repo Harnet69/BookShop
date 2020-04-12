@@ -41,12 +41,16 @@ public class Shop {
     }
 
     public void displayAllBooks(){
+        System.out.println();
+        System.out.println("All exists in the shop books: ");
         Map<Integer, Book> books = booksInMem.getAll();
         books.forEach((integer, book) -> System.out.println(integer  + " : " + book.getName() + ", " + book.getAuthor().getName()+ ", " + book.getPublYear()));
     }
 
     public void displayAllAuthors(){
         Map<Integer,Author> authors = authorsInMem.getAll();
+        System.out.println();
+        System.out.println("All exists in the shop authors: ");
         authors.forEach((integer, author) -> System.out.println(integer + " : name: " + author.getName() + ", e-mail: " + author.getEmail()+ ", was born:" + author.getBirthYear()));
     }
 }

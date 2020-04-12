@@ -5,7 +5,7 @@ public class BookCategory extends Item {
     private int id;
     String description;
 
-    public BookCategory(int id, String name, String description) {
+    public BookCategory(String name, String description) {
         super(name);
         this.id = counterId + 1;
         counterId++;

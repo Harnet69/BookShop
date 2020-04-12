@@ -15,12 +15,12 @@ public class AuthorDao implements Dao<Author> {
 
     @Override
     public void update(int id, Author item) {
-
+        authors.put(id, item);
     }
 
     @Override
     public void delete(int id) {
-
+        authors.remove(id);
     }
 
     @Override
