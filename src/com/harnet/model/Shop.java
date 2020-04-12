@@ -44,4 +44,9 @@ public class Shop {
         Map<Integer, Book> books = booksInMem.getAll();
         books.forEach((integer, book) -> System.out.println(integer  + " : " + book.getName() + ", " + book.getAuthor().getName()+ ", " + book.getPublYear()));
     }
+
+    public void displayAllAuthors(){
+        Map<Integer,Author> authors = authorsInMem.getAll();
+        authors.forEach((integer, author) -> System.out.println(integer + " : name: " + author.getName() + ", e-mail: " + author.getEmail()+ ", was born:" + author.getBirthYear()));
+    }
 }

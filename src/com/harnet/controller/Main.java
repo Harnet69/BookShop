@@ -18,11 +18,18 @@ public class Main {
         Shop.getInstance().getAuthorsInMem().add(Lucas);
 
         // Add some book to shop books store
+        System.out.println();
+        System.out.println("All exists in the shop books: ");
         Shop.getInstance().getBooksInMem().add(new Book("The Hobbit", Tolkien, 1937));
         Shop.getInstance().getBooksInMem().add(new Book("Star wars", Lucas, 1977));
         Shop.getInstance().getBooksInMem().add(new Book("Lord of the rings", Shop.getInstance().getAuthorsInMem().get(1), 1937));
 
         // Display all books
         Shop.getInstance().displayAllBooks();
+
+        // display all authors
+        System.out.println();
+        System.out.println("All exists in the shop authors: ");
+        Shop.getInstance().displayAllAuthors();
     }
 }

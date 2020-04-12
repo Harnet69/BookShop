@@ -2,7 +2,6 @@ package com.harnet.dao;
 
 import com.harnet.model.BookCategory;
 
-import java.util.List;
 import java.util.Map;
 
 public class CategoryDao implements Dao<BookCategory> {

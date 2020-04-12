@@ -3,8 +3,8 @@ package com.harnet.model;
 public class Author extends Item {
     private static int counterId = 0; // thinking about common id
     private int id;
-    String email;
-    int birthYear;
+    private String email;
+    private int birthYear;
 
 
     public Author(String name, String email, int birthYear) {
