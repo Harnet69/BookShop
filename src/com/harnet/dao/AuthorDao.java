@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AuthorDao implements Dao<Author> {
-    Map<Integer, Author> authors = new HashMap<>();
+    private Map<Integer, Author> authors = new HashMap<>();
 
     @Override
     public void add(Author item) {
@@ -30,6 +30,10 @@ public class AuthorDao implements Dao<Author> {
 
     @Override
     public Map<Integer, Author> getAll() {
+        return authors;
+    }
+
+    public Map<Integer, Author> getAuthors() {
         return authors;
     }
 }
